@@ -87,8 +87,10 @@ app.route('/login')
 
     User.findOne({ where: { username: username } }).then(function (user) {
       if (!user) {
+        console.log('no data inserted')
         res.redirect('/login');
       } else if (!user.validPassword(password)) {
+        console.log('acc or pass wrong')
         res.redirect('/login');
       } else {
         req.session.user = user.dataValues;

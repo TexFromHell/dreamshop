@@ -1,3 +1,8 @@
 <div class="container row">
-        <h1>Hi, Welcome to your Dashboard</h1>
+  {{# if loggedin}}
+<h1>Hi {{userName}}, Please view a range of our products below.</h1>
+{{else }}
+<h1>how did you get here ?</h1>
+{{/if}}
+
 </div>
